@@ -100,7 +100,14 @@ public abstract class SubCommandHandler implements org.bukkit.command.CommandExe
         return false;
     }
 
-    private boolean containsAny(String[] haystack, String needle) {
+    /**
+     * Checks if the given array contains the given string (case insensitive).
+     *
+     * @param haystack array to search for the needle
+     * @param needle   string to search in the array
+     * @return true if the string was found in the array, false if not
+     */
+    private static boolean containsAny(String[] haystack, String needle) {
         for (String s : haystack) {
             if (needle.equalsIgnoreCase(s)) {
                 return true;
@@ -173,6 +180,12 @@ public abstract class SubCommandHandler implements org.bukkit.command.CommandExe
         }
     }
 
+    /**
+     * Sends the help line of the given command to the given command sender.
+     *
+     * @param sender  command sender to send the help line to
+     * @param command command to send the help line for
+     */
     protected void sendHelpLine(CommandSender sender, Command command) {
         if (command.value().length > 0) {
             sender.sendMessage("/" + parentCommand + " " + command.value()[0] + " - " + command.description());
@@ -181,6 +194,12 @@ public abstract class SubCommandHandler implements org.bukkit.command.CommandExe
         }
     }
 
+    /**
+     * Sends usage help for the given command to the given command sender.
+     *
+     * @param sender  command sender to send the usage help to
+     * @param command command to send the usage help for
+     */
     protected void sendUsageHelp(CommandSender sender, Command command) {
         sender.sendMessage(command.description());
         if (command.usage().length > 0) {

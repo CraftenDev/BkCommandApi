@@ -19,12 +19,12 @@
     <distributionManagement>
         <repository>
             <id>wertarbyte-repo</id>
-            <url>http://s6.wertarbyte.com/nexus/content/repositories/releases</url>
+            <url>https://nexus.wertarbyte.com/content/repositories/releases</url>
             <uniqueVersion>false</uniqueVersion>
         </repository>
         <snapshotRepository>
             <id>wertarbyte-repo</id>
-            <url>http://s6.wertarbyte.com/nexus/content/repositories/snapshots</url>
+            <url>https://nexus.wertarbyte.com/content/repositories/snapshots</url>
             <uniqueVersion>false</uniqueVersion>
         </snapshotRepository>
     </distributionManagement>

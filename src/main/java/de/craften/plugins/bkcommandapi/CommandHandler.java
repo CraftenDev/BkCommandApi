@@ -18,8 +18,15 @@ public interface CommandHandler {
         Done,
         /**
          * The command was not found.
+         *
+         * @deprecated use {@link #InvalidUsage} instead
          */
+        @Deprecated
         CommandNotFound,
+        /**
+         * The command was used incorrectly.
+         */
+        InvalidUsage,
         /**
          * The sender that invoked the command has no permission to use it.
          */
